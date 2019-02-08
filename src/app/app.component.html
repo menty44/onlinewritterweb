@@ -1,35 +1,26 @@
 <style>
-  i:hover{
+  a:hover{
+    font-family: Raleway;
     color: #33b5e5;
     border-bottom: 5px solid #33b5e5;
+    text-decoration:none;
+
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 
   }
   .mynavs{
     padding-right: 15px;
     padding-left: 15px;
-
-    /*margin-bottom: -1px;*/
-    /*transition: .3s border-color;*/
-  }
-  .tech{
-    background: #4e555b;
-    height: 3px;
-    width: 100%;
-  }
-  .zoom:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
   }
 </style>
 <div class="header py-4">
   <div class="container">
     <div class="d-flex">
-      <a routerLink="/profile" class="mynavs">
+      <a routerLink="/login" class="mynavs">
         <i class="fa fa-home" aria-hidden="true">HOME</i>
-
       </a>
       <a routerLink="/profile" class="mynavs">
-        <i class="fa fa-shopping-cart" aria-hidden="true">PRODUCTS</i>
+        <i  class="fa fa-shopping-cart" aria-hidden="true">PRODUCTS</i>
       </a>
       <a routerLink="/profile" class="mynavs">
         <i style="padding-right: 3px" class="fa fa-credit-card-alt" aria-hidden="true">Payments</i>
@@ -38,20 +29,20 @@
         <i style="padding-right: 3px" class="fa fa-users">Users</i>
       </a>
       <a routerLink="/profile" class="mynavs">
-        <i style="padding-right: 3px" class="fa fa-user-circle">PROFILE</i>
+        <i style="padding-right: 3px" class="fa fa-user-circle"></i>PROFILE
 
       </a>
       <a routerLink="/profile" class="mynavs">
-        <i class="fa fa-pie-chart" aria-hidden="true">REPORTS</i>
+        <i class="fa fa-pie-chart" aria-hidden="true"></i>REPORTS
       </a>
       <div class="d-flex order-lg-2 ml-auto">
         <div class="nav-item d-none d-md-flex">
           <a routerLink="/login" class="btn btn-sm btn-outline-primary" >
             Login</a>
         </div>
-        <div class="nav-item d-none d-md-flex">
-          <a routerLink="/register" class="btn btn-sm btn-primary" >Register</a>
-        </div>
+        <!--<div class="nav-item d-none d-md-flex">-->
+          <!--<a routerLink="/register" class="btn btn-sm btn-primary" >Register</a>-->
+        <!--</div>-->
         <div class="nav-item d-none d-md-flex">
           <a routerLink="/register" class="btn btn-sm btn-danger" >
             <i style="padding-right: 3px" class="fa fa-close"></i>Logout</a>
