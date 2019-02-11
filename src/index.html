@@ -14,9 +14,26 @@
   <link rel="stylesheet" href="./assets/boots/css/bootstrap.min.css.map">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+
 </head>
 <body style="background: #f5f7fb">
   <app-root></app-root>
   <script src="./assets/boots/js/bootstrap.min.js"></script>
+  <script src="./assets/jquery/jquery-1.12.4.js"></script>
+  <script src="./assets/jquery/jquery-ui.js"></script>
+  <script>
+      $( function() {
+          // Set effect from select menu value
+          $( "#button" ).on( "click", function() {
+//              return false;
+              // Most effect types need no options passed by default
+              var options = {};
+              $( "#effect" ).effect( "explode", options, 500, callback );
+          });
+      } );
+  </script>
+
+
 </body>
 </html>

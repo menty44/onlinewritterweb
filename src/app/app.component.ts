@@ -7,4 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My First Angular App!';
+
+    ngOnInit() {
+
+        let auth = localStorage.getItem('profile'),
+            authparsed = JSON.parse(auth);
+
+        if(authparsed !== null){
+            this.nav = authparsed.activated;
+        }else{
+            this.nav = '';
+        }
+
+
+    }
 }

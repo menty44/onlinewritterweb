@@ -15,41 +15,41 @@
 </style>
 <div class="header py-4">
   <div class="container">
-    <div class="d-flex">
-      <a routerLink="/login" class="mynavs">
+    <div class="d-flex">{{nav}}
+      <a routerLink="/" class="mynavs">
         <i class="fa fa-home" aria-hidden="true">HOME</i>
       </a>
-      <a routerLink="/profile" class="mynavs">
+      <a routerLink="/heroes" class="mynavs" *ngIf="nav == 1">
         <i  class="fa fa-shopping-cart" aria-hidden="true">PRODUCTS</i>
       </a>
-      <a routerLink="/profile" class="mynavs">
+      <a routerLink="/profile" class="mynavs" *ngIf="nav === '1'">
         <i style="padding-right: 3px" class="fa fa-credit-card-alt" aria-hidden="true">Payments</i>
       </a>
-      <a routerLink="/profile" class="mynavs">
+      <a routerLink="/profile" class="mynavs" *ngIf="nav == 1">
         <i style="padding-right: 3px" class="fa fa-users">Users</i>
       </a>
-      <a routerLink="/profile" class="mynavs">
+      <a routerLink="/profile" class="mynavs" *ngIf="nav == 1">
         <i style="padding-right: 3px" class="fa fa-user-circle"></i>PROFILE
 
       </a>
-      <a routerLink="/profile" class="mynavs">
+      <a routerLink="/profile" class="mynavs" *ngIf="nav == 1">
         <i class="fa fa-pie-chart" aria-hidden="true"></i>REPORTS
       </a>
-      <div class="d-flex order-lg-2 ml-auto">
-        <div class="nav-item d-none d-md-flex">
+      <div class="d-flex order-lg-2 ml-auto" >
+        <div class="nav-item d-none d-md-flex" *ngIf="nav != 1">
           <a routerLink="/login" class="btn btn-sm btn-outline-primary" >
             Login</a>
         </div>
         <!--<div class="nav-item d-none d-md-flex">-->
           <!--<a routerLink="/register" class="btn btn-sm btn-primary" >Register</a>-->
         <!--</div>-->
-        <div class="nav-item d-none d-md-flex">
+        <div class="nav-item d-none d-md-flex" *ngIf="nav == 1">
           <a routerLink="/register" class="btn btn-sm btn-danger" >
-            <i style="padding-right: 3px" class="fa fa-close"></i>Logout</a>
+            <i style="padding-right: 3px" class="fa fa-close" ></i>Logout</a>
         </div>
-        <button class="btn btn-sm btn-success">
-          <i class="fa fa-circle-o-notch fa-spin"></i>Loading bt
-        </button>
+        <!--<button class="btn btn-sm btn-success">-->
+          <!--<i class="fa fa-circle-o-notch fa-spin"></i>Loading-->
+        <!--</button>-->
 
       </div>
     </div>
@@ -59,12 +59,6 @@
 
   <!--</span>-->
 </div>
-
-<!--<nav class="navbar">-->
-  <!--<a routerLink="/login">Login</a>-->
-  <!--<a routerLink="/register">Register</a>-->
-<!--</nav>-->
-
 <router-outlet></router-outlet>
 
 

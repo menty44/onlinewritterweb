@@ -8,7 +8,8 @@ import {ProfileComponent} from './profile/profile.component';
 import {ResetpasswordComponent} from './resetpassword/resetpassword.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  // { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'heroes', component: HeroesComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
