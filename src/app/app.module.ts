@@ -12,6 +12,10 @@ import { AdminComponent } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
 
 import {FormsModule} from '@angular/forms';
+import { PaymentComponent } from './payment/payment.component';
+import { ProductsComponent } from './products/products.component';
+import { ReportsComponent } from './reports/reports.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import {FormsModule} from '@angular/forms';
     RegisterComponent,
     ResetpasswordComponent,
     AdminComponent,
-    ProfileComponent
+    ProfileComponent,
+    PaymentComponent,
+    ProductsComponent,
+    ReportsComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

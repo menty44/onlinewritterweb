@@ -12,19 +12,27 @@
     padding-right: 15px;
     padding-left: 15px;
   }
+  /* Style the active class, and buttons on mouse-over */
+  .active, .btn:hover {
+    background-color: #467fcf;
+    color: #495057;
+  }
 </style>
 
 <div class="header py-4">
   <div class="container">
     <div class="d-flex">
-      <a class="header-brand" href="./index.html">
-        <img src="./demo/brand/tabler.svg" class="header-brand-img" alt="tabler logo">
+      <a style="font-family: Raleway; padding-top: 8px; color: #467fcf;" class="header-brand" routerLink="/">
+        <!--<img src="./assets/images/smartlogo.png" class="header-brand-img" alt="tabler logo">-->
+          <h4>SMART SHOPPER DASHBOARD ©</h4>
       </a>
       <div class="d-flex order-lg-2 ml-auto">
-        <div class="nav-item d-none d-md-flex">
-          <a routerLink="/register" class="btn btn-sm btn-danger" >
-            <i style="padding-right: 3px" class="fa fa-close" ></i>Logout</a>
+        <div *ngIf="nav === '1'"  class="nav-item d-none d-md-flex btn btn-danger" (click)="logOut()">
+            <i style="padding-right: 3px" class="fa fa-close" ></i>Logout
         </div>
+          <div routerLink="/login" *ngIf="nav !== '1'" class="nav-item d-none d-md-flex btn btn-success" >
+              <i style="padding-right: 3px" class="fa fa-location-arrow" ></i>Login
+          </div>
 
       </div>
       <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse" data-target="#headerMenuCollapse">
@@ -35,39 +43,38 @@
 </div>
 <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-3 ml-auto">
+    <div class="row align-items-center" *ngIf="nav === '1'">
+      <div class="col-lg-3 ml-auto"  >
         <form class="input-icon my-3 my-lg-0">
           <input type="search" class="form-control header-search" placeholder="Search&hellip;" tabindex="1">
           <div class="input-icon-addon">
-            <i class="fe fe-search"></i>
+              <i class="fa fa-search-plus" style="font-size:24px; color:#467fcf"></i>
           </div>
         </form>
       </div>
       <div class="col-lg order-lg-first">
         <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
-          <li class="nav-item">
-            <a routerLink="/" class="nav-link"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+          <li *ngIf="nav === '1'" class="nav-item">
+            <a routerLink="/" class="nav-link active"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
           </li>
-          <li class="nav-item">
-            <a routerLink="/profile" *ngIf="nav === '1'" class="nav-link" data-toggle="dropdown">
+          <li *ngIf="nav === '1'" class="nav-item">
+            <a routerLink="/products" *ngIf="nav === '1'" class="nav-link" data-toggle="dropdown">
               <i  class="fa fa-shopping-cart" aria-hidden="true"></i> Products</a>
           </li>
-          <li class="nav-item dropdown">
-            <a  class="nav-link" ><i style="padding-right: 3px" class="fa fa-credit-card-alt" aria-hidden="true">
+          <li *ngIf="nav === '1'" class="nav-item dropdown">
+            <a  routerLink="/payments" class="nav-link" ><i style="padding-right: 3px" class="fa fa-credit-card-alt" aria-hidden="true">
             </i> Payments</a>
           </li>
-          <li class="nav-item dropdown">
-            <a  class="nav-link active" data-toggle="dropdown">
+          <li *ngIf="nav === '1'" class="nav-item dropdown">
+            <a  routerLink="/users" class="nav-link " data-toggle="dropdown">
               <i style="padding-right: 3px" class="fa fa-users"></i> Users</a>
-
           </li>
-          <li class="nav-item dropdown">
-            <a  class="nav-link">  <i style="padding-right: 3px" class="fa fa-user-circle"></i>
+          <li *ngIf="nav === '1'" class="nav-item dropdown">
+            <a  routerLink="/profile" class="nav-link">  <i style="padding-right: 3px" class="fa fa-user-circle"></i>
               Profile</a>
           </li>
-          <li class="nav-item">
-            <a  class="nav-link"> <i class="fa fa-pie-chart" aria-hidden="true"></i>
+          <li *ngIf="nav === '1'" class="nav-item">
+            <a  routerLink="/reports" class="nav-link"> <i class="fa fa-pie-chart" aria-hidden="true"></i>
               Reports</a>
           </li>
 
@@ -76,6 +83,19 @@
     </div>
   </div>
 </div>
+
+<script>
+  // Add active class to the current button (highlight it)
+  var header = document.getElementById("myDIV");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+</script>
 <router-outlet></router-outlet>
 
 

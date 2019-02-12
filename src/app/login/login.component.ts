@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import * as _ from 'lodash';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {isUndefined} from "util";
 // import allResolved = Q.allResolved;
 
 @Component({
@@ -27,7 +28,7 @@ export class LoginComponent implements OnInit {
       const auth = localStorage.getItem('profile');
       const authparsed = JSON.parse(auth);
 
-      if (authparsed !== null) {
+      if (authparsed !== null || authparsed !== isUndefined) {
           this.nav = authparsed.activated;
       } else {
           this.nav = '';

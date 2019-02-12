@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {isUndefined} from "util";
 
 @Component({
   selector: 'app-profile',
@@ -10,6 +11,16 @@ export class ProfileComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+      const auth = localStorage.getItem('profile');
+      const authparsed = JSON.parse(auth);
+
+      if (authparsed !== null || authparsed !== isUndefined) {
+          this.nav = authparsed.activated;
+          this.profiledata = authparsed;
+      } else {
+          this.nav = '';
+      }
   }
 
 }
