@@ -10271,24 +10271,19 @@ body.fixed-header .page {
 }
 
 .header {
-  /*padding-top: .75rem;*/
+  padding-top: .75rem;
   padding-bottom: .75rem;
   background: #fff;
   border-bottom: 1px solid rgba(0, 40, 100, 0.12);
-  position: fixed;
-  top: 0;
-  /*z-index: 1030;*/
-  left: 0;
-  right: 0;
 }
 
-/*body.fixed-header .header {*/
-  /*position: fixed;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*z-index: 1030;*/
-/*}*/
+body.fixed-header .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
 
 @media print {
   .header {
