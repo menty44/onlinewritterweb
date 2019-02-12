@@ -15,6 +15,7 @@ export class HeroesComponent implements OnInit {
     id: 1,
     name: 'Windstormbbb'
   };
+  public nav;
   private fred: string;
   private oluoch: any;
 

@@ -11,7 +11,6 @@ import { ResetpasswordComponent } from './resetpassword/resetpassword.component'
 import { AdminComponent } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
 
-import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -28,8 +27,7 @@ import {FormsModule} from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-      Ng4LoadingSpinnerModule.forRoot(),
-      FormsModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,7 +11,7 @@ export class AppComponent implements OnInit{
 
     constructor() { }
 
-    ngOnInit (){
+    ngOnInit () {
             let auth = localStorage.getItem('profile'),
                 authparsed = JSON.parse(auth);
 

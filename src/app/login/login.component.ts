@@ -11,9 +11,12 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-    public name: String;
+    public name: string;
     public email: any;
     public password: any;
+    public nav;
+    public oluoch;
+    private clickMessage: string;
 
 
 
@@ -21,12 +24,12 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
 
-      let auth = localStorage.getItem('profile'),
-          authparsed = JSON.parse(auth);
+      const auth = localStorage.getItem('profile');
+      const authparsed = JSON.parse(auth);
 
-      if(authparsed !== null){
+      if (authparsed !== null) {
           this.nav = authparsed.activated;
-      }else{
+      } else {
           this.nav = '';
       }
 
@@ -35,20 +38,19 @@ export class LoginComponent implements OnInit {
 
     onClickMe() {
         this.clickMessage = 'You are my hero!';
-        let k = this.email;
-        let m = this.password;
+        const k = this.email;
+        const m = this.password;
         console.log(k);
         console.log(m);
 
         // Make a request for a user login
-        axios.get('http://localhost:8080/login?email='+k+'&password='+m)
+        axios.get('http://localhost:8080/login?email=' + k + '&password=' + m)
             .then(response => {
                 console.log('freddy', response.data);
                 console.log('freddy', response.data.activated);
                 localStorage.setItem('profile', JSON.stringify(response.data));
                 this.oluoch = response.data;
-                //this.nav = response.data.activated;
-                window.location.href = '/'; //relative to domain
+                window.location.href = '/';
             })
             .catch(error => {
                 console.log(error);
