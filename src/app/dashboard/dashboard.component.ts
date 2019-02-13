@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+    private totalusers;
+    private totalpurchases;
+    private totalpayments;
+    private todaypurchases;
+    private messagessent;
+    private customerissues;
 
   constructor() { }
 
   ngOnInit() {
+    this.totalusers = localStorage.getItem('totalusers');
+    this.totalpurchases = localStorage.getItem('totalpurchases');
+    this.totalpayments = localStorage.getItem('totalpayments');
+    this.todaypurchases = localStorage.getItem('todaypurchases');
+    this.messagessent = localStorage.getItem('messagessent');
+    this.customerissues = localStorage.getItem('customerissues');
   }
 
 }

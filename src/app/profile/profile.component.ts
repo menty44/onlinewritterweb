@@ -10,7 +10,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class ProfileComponent implements OnInit {
     private nav;
-    private profiledata;
+    private profileda;
 
   constructor(private spinner: NgxSpinnerService) { }
 

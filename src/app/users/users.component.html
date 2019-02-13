@@ -10,7 +10,6 @@
             <div class="card">
               <div class="card-header" style="color: #6c757d; text-align: justify; padding-top:22px;">
                 <div style="width: 100%" class="alert alert-primary">Users Details </div>
-                <!--<h1>Profile Details</h1>-->
               </div>
 
             </div>
@@ -38,23 +37,23 @@
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td><span class="text-muted">001401</span></td>
-                    <td><a href="invoice.html" class="text-inherit">Design Works</a></td>
+                  <tr *ngFor="let item of allUsers.content let i = index">
+                    <td><span class="text-muted">{{i+1}}</span></td>
+                    <td><a href="invoice.html" class="text-inherit">{{item.firstname}}</a></td>
                     <td class="small text-muted">
-                      Carlson Limited
+                      {{item.lastname}}
                     </td>
                     <td>
-                      87956621
+                      {{item.gender}}
                     </td>
                     <td>
-                      15 Dec 2017
+                        {{item.myrole}}
                     </td>
                     <td>
-                      <span class="status-icon bg-success"></span> Paid
+                        {{item.mobile}}
                     </td>
-                    <td>$887</td>
-                    <td>99</td>
+                    <td>{{item.email}}</td>
+                    <td><span class="status-icon bg-success"></span>{{item.activated}}</td>
                     <td><button style="width: 100%" class=" btn btn-primary">View</button>
                     </td>
                   </tr>
