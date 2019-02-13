@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import swal from 'SweetAlert';
 
 @Component({
   selector: 'app-dashboard',
@@ -22,6 +23,10 @@ export class DashboardComponent implements OnInit {
     this.todaypurchases = localStorage.getItem('todaypurchases');
     this.messagessent = localStorage.getItem('messagessent');
     this.customerissues = localStorage.getItem('customerissues');
+  }
+
+  sweet() {
+      swal("Good job!", "You clicked the button!", "success");
   }
 
 }

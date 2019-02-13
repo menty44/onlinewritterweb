@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {NgxSpinnerService} from 'ngx-spinner';
 import axios from 'axios';
+import swal from 'SweetAlert';
 
 
 @Component({
@@ -33,6 +34,25 @@ export class UsersComponent implements OnInit {
           })
           .catch(error => {
               console.log(error);
+          });
+  }
+
+  deleteUser() {
+      swal({
+          title: "Are you sure?",
+          text: "Once deleted, you will not be able to reverse the operation!",
+          icon: "warning",
+          buttons: true,
+          dangerMode: true,
+      })
+          .then((willDelete) => {
+              if (willDelete) {
+                  swal("Selected User has been deleted!", {
+                      icon: "success",
+                  });
+              } else {
+                  swal("Selected User has not been deleted!");
+              }
           });
   }
 

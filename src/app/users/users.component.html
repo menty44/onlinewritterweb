@@ -34,6 +34,7 @@
                     <th>Email</th>
                     <th>Activated</th>
                     <th>Check</th>
+                    <th style="color: red">Delete</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -53,8 +54,12 @@
                         {{item.mobile}}
                     </td>
                     <td>{{item.email}}</td>
-                    <td><span class="status-icon bg-success"></span>{{item.activated}}</td>
+                    <td>
+                        <span *ngIf="item.activated == 1" class="status-icon bg-success"></span>
+                        <span *ngIf="item.activated != 1" class="status-icon bg-danger"></span>
+                        {{item.activated}}</td>
                     <td><button style="width: 100%" class=" btn btn-primary">View</button>
+                    <td><button style="width: 100%" class=" btn btn-danger" (click)="deleteUser()">Delete</button>
                     </td>
                   </tr>
 
