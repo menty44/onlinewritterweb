@@ -16,6 +16,10 @@ import { PaymentComponent } from './payment/payment.component';
 import { ProductsComponent } from './products/products.component';
 import { ReportsComponent } from './reports/reports.component';
 import { UsersComponent } from './users/users.component';
+import { AddproductComponent } from './addproduct/addproduct.component';
+import { AdduserComponent } from './adduser/adduser.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +34,16 @@ import { UsersComponent } from './users/users.component';
     PaymentComponent,
     ProductsComponent,
     ReportsComponent,
-    UsersComponent
+    UsersComponent,
+    AddproductComponent,
+    AdduserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

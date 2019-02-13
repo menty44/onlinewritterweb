@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 import * as _ from 'lodash';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {isUndefined} from "util";
-// import allResolved = Q.allResolved;
+import {isUndefined} from 'util';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
 
 
 
-    constructor() { }
+    constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
 
@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit {
   }
 
     onClickMe() {
+        /** spinner starts on init */
+        this.spinner.show();
         this.clickMessage = 'You are my hero!';
         const k = this.email;
         const m = this.password;
@@ -52,6 +54,10 @@ export class LoginComponent implements OnInit {
                 localStorage.setItem('profile', JSON.stringify(response.data));
                 this.oluoch = response.data;
                 window.location.href = '/';
+                setTimeout(() => {
+                  /** spinner ends after 5 seconds */
+                  this.spinner.hide();
+                }, 500);
             })
             .catch(error => {
                 console.log(error);

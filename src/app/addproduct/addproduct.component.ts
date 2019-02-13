@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: 'app-addproduct',
+  templateUrl: './addproduct.component.html',
+  styleUrls: ['./addproduct.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class AddproductComponent implements OnInit {
 
   constructor(private spinner: NgxSpinnerService) { }
 
@@ -18,5 +18,4 @@ export class ProductsComponent implements OnInit {
       this.spinner.hide();
     }, 500);
   }
-
 }

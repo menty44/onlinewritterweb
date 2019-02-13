@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {isUndefined} from "util";
+import {isUndefined} from 'util';
+import { NgxSpinnerService } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-profile',
@@ -10,16 +12,21 @@ export class ProfileComponent implements OnInit {
     private nav;
     private profiledata;
 
-  constructor() { }
+  constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-
+      /** spinner starts on init */
+      this.spinner.show();
       const auth = localStorage.getItem('profile');
       const authparsed = JSON.parse(auth);
 
       if (authparsed !== null || authparsed !== isUndefined) {
           this.nav = authparsed.activated;
           this.profiledata = authparsed;
+          setTimeout(() => {
+            /** spinner ends after 5 seconds */
+            this.spinner.hide();
+          }, 500);
       } else {
           this.nav = '';
       }
