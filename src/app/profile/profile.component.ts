@@ -7,6 +7,8 @@ import {isUndefined} from "util";
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+    private nav;
+    private profiledata;
 
   constructor() { }
 

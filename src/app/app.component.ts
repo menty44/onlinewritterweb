@@ -29,24 +29,5 @@ export class AppComponent implements OnInit{
         window.location.href = '/';
     }
 
-    onClickMe() {
-        this.clickMessage = 'You are my hero!';
-        const k = this.email;
-        const m = this.password;
-        console.log(k);
-        console.log(m);
 
-        // Make a request for a user login
-        axios.get('http://localhost:8080/login?email=' + k + '&password=' + m)
-            .then(response => {
-                console.log('freddy', response.data);
-                console.log('freddy', response.data.activated);
-                localStorage.setItem('profile', JSON.stringify(response.data));
-                this.oluoch = response.data;
-                window.location.href = '/';
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    }
 }
