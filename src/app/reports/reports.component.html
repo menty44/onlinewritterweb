@@ -1,9 +1,170 @@
 <ngx-spinner></ngx-spinner>
-<p>
-  reports works!
-</p>
-<script type="text/javascript">
-  $(window).load(function() {
-    $(".loader").fadeOut("slow");
-  });
-</script>
+<div class="page">
+  <div class="page-main">
+    <div class="container">
+      <div class="my-3 my-md-5">
+        <!--<div class="container">-->
+        <div class="row row-cards">
+
+          <div class="col-md-12">
+            <div class="alert alert-primary">Reports</div>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Chart title</h3>
+                  </div>
+                  <div class="card-body">
+                    <div id="chart-donut" style="height: 12rem; max-height: 192px; position: relative;" class="c3"><svg width="166" height="192" style="overflow: hidden;"><defs><clipPath id="c3-1550058860610-clip"><rect width="166" height="188"></rect></clipPath><clipPath id="c3-1550058860610-clip-xaxis"><rect x="-31" y="-20" width="228" height="20"></rect></clipPath><clipPath id="c3-1550058860610-clip-yaxis"><rect x="-29" y="-4" width="20" height="212"></rect></clipPath><clipPath id="c3-1550058860610-clip-grid"><rect width="166" height="188"></rect></clipPath><clipPath id="c3-1550058860610-clip-subchart"><rect width="166"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="83" y="94" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="166" height="188" style="opacity: 0;"></rect><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip)" class="c3-regions" style="visibility: hidden;"></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip-grid)" class="c3-grid" style="visibility: hidden;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="188" style="visibility: hidden;"></line></g></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip)" class="c3-chart"><g class="c3-event-rects c3-event-rects-single" style="fill-opacity: 0;"><rect class=" c3-event-rect c3-event-rect-0" x="0" y="0" width="166" height="188"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-data1" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-data1 c3-bars c3-bars-data1" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-data2" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-data2 c3-bars c3-bars-data2" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-data1" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-data1 c3-lines c3-lines-data1"></g><g class=" c3-shapes c3-shapes-data1 c3-areas c3-areas-data1"></g><g class=" c3-selected-circles c3-selected-circles-data1"></g><g class=" c3-shapes c3-shapes-data1 c3-circles c3-circles-data1" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-data2" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-data2 c3-lines c3-lines-data2"></g><g class=" c3-shapes c3-shapes-data2 c3-areas c3-areas-data2"></g><g class=" c3-selected-circles c3-selected-circles-data2"></g><g class=" c3-shapes c3-shapes-data2 c3-circles c3-circles-data2" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(83,89)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 1;"></text><g class="c3-chart-arc c3-target c3-target-data1"><g class=" c3-shapes c3-shapes-data1 c3-arcs c3-arcs-data1"><path class=" c3-shape c3-shape c3-arc c3-arc-data1" transform="scale(1,1)" style="fill: rgb(94, 186, 0); cursor: pointer;" d="M4.82817000563844e-15,-78.85A78.85,78.85 0 1,1 -57.47917627217831,53.976539302477086L-34.487505763306984,32.38592358148625A47.309999999999995,47.309999999999995 0 1,0 2.8969020033830637e-15,-47.309999999999995Z"></path></g><text dy=".35em" class="" transform="translate(51.98965235171542,22.497931569597036)" style="opacity: 1; text-anchor: middle; pointer-events: none;">63.0%</text></g><g class="c3-chart-arc c3-target c3-target-data2"><g class=" c3-shapes c3-shapes-data2 c3-arcs c3-arcs-data2"><path class=" c3-shape c3-shape c3-arc c3-arc-data2" transform="scale(1,1)" style="fill: rgb(142, 207, 77); cursor: pointer;" d="M-57.47917627217831,53.976539302477086A78.85,78.85 0 0,1 -1.4484510016915318e-14,-78.85L-8.69070601014919e-15,-47.309999999999995A47.309999999999995,47.309999999999995 0 0,0 -34.487505763306984,32.38592358148625Z"></path></g><text dy=".35em" class="" transform="translate(-51.989652351715414,-22.497931569597036)" style="opacity: 1; text-anchor: middle; pointer-events: none;">37.0%</text></g></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-data1" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-data1"></g></g><g class="c3-chart-text c3-target c3-target-data2" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-data2"></g></g></g></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip-xaxis)" transform="translate(0,188)" style="visibility: visible; opacity: 0;"><text class="c3-axis-x-label" transform="" style="text-anchor: end;" x="166" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(83, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><path class="domain" d="M0,6V0H166V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 0;"><text class="c3-axis-y-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="1.2em"></text><g class="tick" transform="translate(0,185)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">35</tspan></text></g><g class="tick" transform="translate(0,155)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">40</tspan></text></g><g class="tick" transform="translate(0,125)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">45</tspan></text></g><g class="tick" transform="translate(0,95)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">50</tspan></text></g><g class="tick" transform="translate(0,65)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">55</tspan></text></g><g class="tick" transform="translate(0,35)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">60</tspan></text></g><g class="tick" transform="translate(0,5)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">65</tspan></text></g><path class="domain" d="M-6,1H0V188H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(166,0)" style="visibility: hidden; opacity: 0;"><text class="c3-axis-y2-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(0,188)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,170)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,151)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,132)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,114)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,95)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,76)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,58)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,39)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,20)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V188H6"></path></g></g><g transform="translate(0.5,192.5)" style="visibility: hidden;"><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" x="0" width="166" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" x="0" width="0" style="cursor: move;"></rect><g class="resize e" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize w" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860610-clip-xaxis)" style="visibility: hidden; opacity: 0;"><g class="tick" transform="translate(83, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><path class="domain" d="M0,6V0H166V6"></path></g></g><g transform="translate(0,192)" style="visibility: hidden;"></g><text class="c3-title" x="83" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                  </div>
+                </div>
+                <script>
+                  require(['c3', 'jquery'], function(c3, $) {
+                    $(document).ready(function(){
+                      var chart = c3.generate({
+                        bindto: '#chart-donut', // id of chart wrapper
+                        data: {
+                          columns: [
+                            // each columns data
+                            ['data1', 63],
+                            ['data2', 37]
+                          ],
+                          type: 'donut', // default type of chart
+                          colors: {
+                            'data1': tabler.colors["green"],
+                            'data2': tabler.colors["green-light"]
+                          },
+                          names: {
+                            // name of each serie
+                            'data1': 'Maximum',
+                            'data2': 'Minimum'
+                          }
+                        },
+                        axis: {
+                        },
+                        legend: {
+                          show: false, //hide legend
+                        },
+                        padding: {
+                          bottom: 0,
+                          top: 0
+                        },
+                      });
+                    });
+                  });
+                </script>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h3 class="card-title">Chart title</h3>
+                  </div>
+                  <div class="card-body">
+                    <div id="chart-pie" style="height: 12rem; max-height: 192px; position: relative;" class="c3"><svg width="166" height="192" style="overflow: hidden;"><defs><clipPath id="c3-1550058860656-clip"><rect width="166" height="188"></rect></clipPath><clipPath id="c3-1550058860656-clip-xaxis"><rect x="-31" y="-20" width="228" height="20"></rect></clipPath><clipPath id="c3-1550058860656-clip-yaxis"><rect x="-29" y="-4" width="20" height="212"></rect></clipPath><clipPath id="c3-1550058860656-clip-grid"><rect width="166" height="188"></rect></clipPath><clipPath id="c3-1550058860656-clip-subchart"><rect width="166"></rect></clipPath></defs><g transform="translate(0.5,4.5)"><text class="c3-text c3-empty" text-anchor="middle" dominant-baseline="middle" x="83" y="94" style="opacity: 0;"></text><rect class="c3-zoom-rect" width="166" height="188" style="opacity: 0;"></rect><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip)" class="c3-regions" style="visibility: hidden;"></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip-grid)" class="c3-grid" style="visibility: hidden;"><g class="c3-xgrid-focus"><line class="c3-xgrid-focus" x1="-10" x2="-10" y1="0" y2="188" style="visibility: hidden;"></line></g></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip)" class="c3-chart"><g class="c3-event-rects c3-event-rects-single" style="fill-opacity: 0;"><rect class=" c3-event-rect c3-event-rect-0" x="0" y="0" width="166" height="188"></rect></g><g class="c3-chart-bars"><g class="c3-chart-bar c3-target c3-target-data1" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-data1 c3-bars c3-bars-data1" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-data2" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-data2 c3-bars c3-bars-data2" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-data3" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-data3 c3-bars c3-bars-data3" style="cursor: pointer;"></g></g><g class="c3-chart-bar c3-target c3-target-data4" style="pointer-events: none;"><g class=" c3-shapes c3-shapes-data4 c3-bars c3-bars-data4" style="cursor: pointer;"></g></g></g><g class="c3-chart-lines"><g class="c3-chart-line c3-target c3-target-data1" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-data1 c3-lines c3-lines-data1"></g><g class=" c3-shapes c3-shapes-data1 c3-areas c3-areas-data1"></g><g class=" c3-selected-circles c3-selected-circles-data1"></g><g class=" c3-shapes c3-shapes-data1 c3-circles c3-circles-data1" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-data2" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-data2 c3-lines c3-lines-data2"></g><g class=" c3-shapes c3-shapes-data2 c3-areas c3-areas-data2"></g><g class=" c3-selected-circles c3-selected-circles-data2"></g><g class=" c3-shapes c3-shapes-data2 c3-circles c3-circles-data2" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-data3" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-data3 c3-lines c3-lines-data3"></g><g class=" c3-shapes c3-shapes-data3 c3-areas c3-areas-data3"></g><g class=" c3-selected-circles c3-selected-circles-data3"></g><g class=" c3-shapes c3-shapes-data3 c3-circles c3-circles-data3" style="cursor: pointer;"></g></g><g class="c3-chart-line c3-target c3-target-data4" style="opacity: 1; pointer-events: none;"><g class=" c3-shapes c3-shapes-data4 c3-lines c3-lines-data4"></g><g class=" c3-shapes c3-shapes-data4 c3-areas c3-areas-data4"></g><g class=" c3-selected-circles c3-selected-circles-data4"></g><g class=" c3-shapes c3-shapes-data4 c3-circles c3-circles-data4" style="cursor: pointer;"></g></g></g><g class="c3-chart-arcs" transform="translate(83,89)"><text class="c3-chart-arcs-title" style="text-anchor: middle; opacity: 0;"></text><g class="c3-chart-arc c3-target c3-target-data1"><g class=" c3-shapes c3-shapes-data1 c3-arcs c3-arcs-data1"><path class=" c3-shape c3-shape c3-arc c3-arc-data1" transform="scale(1,1)" style="fill: rgb(28, 51, 83); cursor: pointer;" d="M4.82817000563844e-15,-78.85A78.85,78.85 0 0,1 12.978283443635872,77.77458877330464L0,0Z"></path></g><text dy=".35em" class="" transform="translate(56.45526579821159,-4.678016696825787)" style="opacity: 1; text-anchor: middle; pointer-events: none;">47.4%</text></g><g class="c3-chart-arc c3-target c3-target-data2"><g class=" c3-shapes c3-shapes-data2 c3-arcs c3-arcs-data2"><path class=" c3-shape c3-shape c3-arc c3-arc-data2" transform="scale(1,1)" style="fill: rgb(70, 127, 207); cursor: pointer;" d="M12.978283443635872,77.77458877330464A78.85,78.85 0 0,1 -74.27011633572373,-26.48154677276352L0,0Z"></path></g><text dy=".35em" class="" transform="translate(-43.44320688420666,36.356136375837835)" style="opacity: 1; text-anchor: middle; pointer-events: none;">33.1%</text></g><g class="c3-chart-arc c3-target c3-target-data3"><g class=" c3-shapes c3-shapes-data3 c3-arcs c3-arcs-data3"><path class=" c3-shape c3-shape c3-arc c3-arc-data3" transform="scale(1,1)" style="fill: rgb(126, 165, 221); cursor: pointer;" d="M-42.34425475858504,-66.51531093620511A78.85,78.85 0 0,1 -1.4484510016915318e-14,-78.85L0,0Z"></path></g><text dy=".35em" class="" transform="translate(-15.84304251558774,-54.38822372914727)" style="opacity: 1; text-anchor: middle; pointer-events: none;">9.0%</text></g><g class="c3-chart-arc c3-target c3-target-data4"><g class=" c3-shapes c3-shapes-data4 c3-arcs c3-arcs-data4"><path class=" c3-shape c3-shape c3-arc c3-arc-data4" transform="scale(1,1)" style="fill: rgb(200, 217, 241); cursor: pointer;" d="M-74.27011633572373,-26.48154677276352A78.85,78.85 0 0,1 -42.34425475858504,-66.51531093620511L0,0Z"></path></g><text dy=".35em" class="" transform="translate(-44.289776192460806,-35.31991791304492)" style="opacity: 1; text-anchor: middle; pointer-events: none;">10.5%</text></g></g><g class="c3-chart-texts"><g class="c3-chart-text c3-target c3-target-data1" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-data1"></g></g><g class="c3-chart-text c3-target c3-target-data2" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-data2"></g></g><g class="c3-chart-text c3-target c3-target-data3" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-data3"></g></g><g class="c3-chart-text c3-target c3-target-data4" style="opacity: 1; pointer-events: none;"><g class=" c3-texts c3-texts-data4"></g></g></g></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip-grid)" class="c3-grid c3-grid-lines"><g class="c3-xgrid-lines"></g><g class="c3-ygrid-lines"></g></g><g class="c3-axis c3-axis-x" clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip-xaxis)" transform="translate(0,188)" style="visibility: visible; opacity: 0;"><text class="c3-axis-x-label" transform="" style="text-anchor: end;" x="166" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(83, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><path class="domain" d="M0,6V0H166V6"></path></g><g class="c3-axis c3-axis-y" clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip-yaxis)" transform="translate(0,0)" style="visibility: visible; opacity: 0;"><text class="c3-axis-y-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="1.2em"></text><g class="tick" transform="translate(0,179)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">10</tspan></text></g><g class="tick" transform="translate(0,164)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">15</tspan></text></g><g class="tick" transform="translate(0,148)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">20</tspan></text></g><g class="tick" transform="translate(0,133)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">25</tspan></text></g><g class="tick" transform="translate(0,118)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">30</tspan></text></g><g class="tick" transform="translate(0,103)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">35</tspan></text></g><g class="tick" transform="translate(0,87)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">40</tspan></text></g><g class="tick" transform="translate(0,72)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">45</tspan></text></g><g class="tick" transform="translate(0,57)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">50</tspan></text></g><g class="tick" transform="translate(0,42)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">55</tspan></text></g><g class="tick" transform="translate(0,26)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">60</tspan></text></g><g class="tick" transform="translate(0,11)" style="opacity: 1;"><line x2="-6"></line><text x="-9" y="0" style="text-anchor: end;"><tspan x="-9" dy="3">65</tspan></text></g><path class="domain" d="M-6,1H0V188H-6"></path></g><g class="c3-axis c3-axis-y2" transform="translate(166,0)" style="visibility: hidden; opacity: 0;"><text class="c3-axis-y2-label" transform="rotate(-90)" style="text-anchor: end;" x="0" dx="-0.5em" dy="-0.5em"></text><g class="tick" transform="translate(0,188)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0</tspan></text></g><g class="tick" transform="translate(0,170)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.1</tspan></text></g><g class="tick" transform="translate(0,151)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.2</tspan></text></g><g class="tick" transform="translate(0,132)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.3</tspan></text></g><g class="tick" transform="translate(0,114)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.4</tspan></text></g><g class="tick" transform="translate(0,95)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.5</tspan></text></g><g class="tick" transform="translate(0,76)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.6</tspan></text></g><g class="tick" transform="translate(0,58)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.7</tspan></text></g><g class="tick" transform="translate(0,39)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.8</tspan></text></g><g class="tick" transform="translate(0,20)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">0.9</tspan></text></g><g class="tick" transform="translate(0,1)" style="opacity: 1;"><line x2="6" y2="0"></line><text x="9" y="0" style="text-anchor: start;"><tspan x="9" dy="3">1</tspan></text></g><path class="domain" d="M6,1H0V188H6"></path></g></g><g transform="translate(0.5,192.5)" style="visibility: hidden;"><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip-subchart)" class="c3-chart"><g class="c3-chart-bars"></g><g class="c3-chart-lines"></g></g><g clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip)" class="c3-brush" style="pointer-events: all; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><rect class="background" x="0" width="166" style="visibility: hidden; cursor: crosshair;"></rect><rect class="extent" x="0" width="0" style="cursor: move;"></rect><g class="resize e" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g><g class="resize w" transform="translate(0,0)" style="cursor: ew-resize; display: none;"><rect x="-3" width="6" height="6" style="visibility: hidden;"></rect></g></g><g class="c3-axis-x" transform="translate(0,0)" clip-path="url(file:///home/user/Music/ionicfreethemes/tabler-dev/dist/index.html#c3-1550058860656-clip-xaxis)" style="visibility: hidden; opacity: 0;"><g class="tick" transform="translate(83, 0)" style="opacity: 1;"><line x1="0" x2="0" y2="6"></line><text x="0" y="9" transform="" style="text-anchor: middle; display: block;"><tspan x="0" dy=".71em" dx="0">0</tspan></text></g><path class="domain" d="M0,6V0H166V6"></path></g></g><g transform="translate(0,192)" style="visibility: hidden;"></g><text class="c3-title" x="83" y="0"></text></svg><div class="c3-tooltip-container" style="position: absolute; pointer-events: none; display: none;"></div></div>
+                  </div>
+                </div>
+                <script>
+                  require(['c3', 'jquery'], function(c3, $) {
+                    $(document).ready(function(){
+                      var chart = c3.generate({
+                        bindto: '#chart-pie', // id of chart wrapper
+                        data: {
+                          columns: [
+                            // each columns data
+                            ['data1', 63],
+                            ['data2', 44],
+                            ['data3', 12],
+                            ['data4', 14]
+                          ],
+                          type: 'pie', // default type of chart
+                          colors: {
+                            'data1': tabler.colors["blue-darker"],
+                            'data2': tabler.colors["blue"],
+                            'data3': tabler.colors["blue-light"],
+                            'data4': tabler.colors["blue-lighter"]
+                          },
+                          names: {
+                            // name of each serie
+                            'data1': 'A',
+                            'data2': 'B',
+                            'data3': 'C',
+                            'data4': 'D'
+                          }
+                        },
+                        axis: {
+                        },
+                        legend: {
+                          show: false, //hide legend
+                        },
+                        padding: {
+                          bottom: 0,
+                          top: 0
+                        },
+                      });
+                    });
+                  });
+                </script>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="h5">New feedback</div>
+                    <div class="display-4 font-weight-bold mb-4">62</div>
+                    <div class="progress progress-sm">
+                      <div class="progress-bar bg-red" style="width: 28%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="h5">Today profit</div>
+                    <div class="display-4 font-weight-bold mb-4">$652</div>
+                    <div class="progress progress-sm">
+                      <div class="progress-bar bg-green" style="width: 84%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="footer">
+
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row align-items-center flex-row-reverse">
+        <div class="col-auto ml-lg-auto">
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <!--<ul class="list-inline list-inline-dots mb-0">-->
+              <!--<li class="list-inline-item"><a href="./docs/index.html">Documentation</a></li>-->
+              <!--<li class="list-inline-item"><a href="./faq.html">FAQ</a></li>-->
+              <!--</ul>-->
+            </div>
+            <div class="col-auto">
+              <!--<a href="https://github.com/tabler/tabler" class="btn btn-outline-primary btn-sm">Source code</a>-->
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-auto mt-3 mt-lg-0 text-center">
+          Copyright © 2019 <a href="https://blaqueyard.com" target="_blank">Blaqueyard ltd</a> All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!--</div>-->
+
