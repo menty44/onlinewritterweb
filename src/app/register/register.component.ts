@@ -29,7 +29,6 @@ export class RegisterComponent implements OnInit {
 
     /** spinner starts on init */
     this.spinner.show();
-    this.clickMessage = 'You are my hero!';
     const firstname = this.firstname;
     const lastname = this.lastname;
     const mobile = this.mobile;

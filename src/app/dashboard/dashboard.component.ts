@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import swal from 'SweetAlert';
+// import swal from 'sweetalert';
 
 @Component({
   selector: 'app-dashboard',
@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
   }
 
   sweet() {
-      swal("Good job!", "You clicked the button!", "success");
+      // swal("Good job!", "You clicked the button!", "success");
   }
 
 }
