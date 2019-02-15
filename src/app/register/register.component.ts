@@ -43,7 +43,9 @@ export class RegisterComponent implements OnInit {
     console.log(password);
 
     // Make a request for a user login
-    axios.post('http://localhost:8080/newshopper?firstname='+firstname+'&lastname='+lastname+'&mobile='+mobile+'&email='+email+'&gender='+gender+'&password='+password)
+
+    axios.post('http://localhost:8080/newshopper?firstname=' + firstname
+      + '&lastname=' + lastname + '&mobile=' + mobile + '&email=' + email + '&gender=' + gender + '&password=' + password)
         .then(response => {
 
           window.location.href = '/users';
