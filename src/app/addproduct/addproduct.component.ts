@@ -36,6 +36,7 @@ export class AddproductComponent implements OnInit {
     const description = this.description;
     const stock = this.stock;
     console.log('prodcode' + prodcode);
+    console.log('name' + name);
     console.log('unitprice' +  unitprice);
     console.log('sellprice'  + sellprice);
     console.log('description' +  description);
@@ -44,7 +45,8 @@ export class AddproductComponent implements OnInit {
       '&unitprice=' + unitprice +
       '&sellprice=' + sellprice +
       '&description=' + description +
-      '&stock=' + stock)
+      '&stock=' + stock +
+      '&name=' + name)
       .then(response => {
         console.log(response);
       })
