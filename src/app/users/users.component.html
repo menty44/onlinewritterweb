@@ -55,8 +55,8 @@
                     </td>
                     <td>{{item.email}}</td>
                     <td>
-                        <span *ngIf="item.activated == 1" class="status-icon bg-success"></span>
-                        <span *ngIf="item.activated != 1" class="status-icon bg-danger"></span>
+                        <span [className]="item.activated == '1' ? 'status-icon bg-success' : 'status-icon bg-danger'">
+                        </span>
                         {{item.activated}}</td>
                     <td><button style="width: 100%" class=" btn btn-primary">View</button>
                     <td><button style="width: 100%" class=" btn btn-danger" (click)="deleteUser()">Delete</button>

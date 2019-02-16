@@ -45,8 +45,6 @@
                     <td><span class="text-muted"> {{item.sellprice}}</span></td>
                     <td><span class="text-muted"> {{item.prodcode}}</span></td>
                     <td>
-                      <!-- <span style="float:center;" *ngIf="item.stock >= '10'" class="status-icon bg-success"></span>
-                      <span style="float:center;" *ngIf="item.stock !> '10'" class="status-icon bg-danger"></span>  -->
                       <span style="float:center;" *ngIf="item.stock !> '10'" [className]="item.stock > 10 ? 'status-icon bg-success' : 'status-icon bg-danger'"></span> 
                       <span style="float:center;">{{item.stock}}</span>
                     </td>
