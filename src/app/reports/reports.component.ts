@@ -7,16 +7,17 @@ import {NgxSpinnerService} from 'ngx-spinner';
   styleUrls: ['./reports.component.css']
 })
 export class ReportsComponent implements OnInit {
+  public nav;
 
   constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-    /** spinner starts on init */
-    this.spinner.show();
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 500);
+    // /** spinner starts on init */
+    // this.spinner.show();
+    // setTimeout(() => {
+    //   /** spinner ends after 5 seconds */
+    //   this.spinner.hide();
+    // }, 500);
   }
 
 }

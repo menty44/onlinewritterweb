@@ -10,12 +10,18 @@ import axios from 'axios';
 export class ProductsComponent implements OnInit {
 
   public allProducts;
+  public nav;
   constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-    /** spinner starts on init */
-    this.spinner.show();
+    const auth = localStorage.getItem('profile');
+    const authparsed = JSON.parse(auth);
 
+    if (authparsed !== null || authparsed !== isUndefined) {
+        this.nav = authparsed.activated;
+    } else {
+        this.nav = '';
+}
     axios.get('http://localhost:8080/products')
           .then(response => {
               console.log('freddy', response.data);
@@ -23,18 +29,9 @@ export class ProductsComponent implements OnInit {
               localStorage.setItem('products', JSON.stringify(response.data.totalElements));
 
               this.allProducts = response.data;
-
-              setTimeout(() => {
-                  /** spinner ends after 5 seconds */
-                  this.spinner.hide();
-              }, 200);
           })
           .catch(error => {
               console.log(error);
           });
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    });
   }
 }

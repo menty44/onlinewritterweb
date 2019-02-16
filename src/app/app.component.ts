@@ -13,20 +13,21 @@ export class AppComponent implements OnInit{
     constructor() { }
 
     ngOnInit () {
-            let auth = localStorage.getItem('profile'),
-                authparsed = JSON.parse(auth);
+            const auth = localStorage.getItem('profile');
+            const authparsed = JSON.parse(auth);
 
             if (authparsed !== null || authparsed !== isUndefined) {
                 this.nav = authparsed.activated;
-            }else{
+            } else {
                 this.nav = '';
             }
         }
 
     logOut() {
         console.log('logout');
-        localStorage.clear();
-        window.location.href = '/';
+        // localStorage.clear();
+        localStorage.setItem('profile', '{"activated":"0"}');
+        // window.location.href = '/';
     }
 
 

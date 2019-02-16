@@ -14,8 +14,9 @@ export class DashboardComponent implements OnInit {
     private todaypurchases;
     private messagessent;
     private customerissues;
+    private products;
     private allUsers: any;
-    private products: any;
+    private products;
 
   constructor() { }
 
@@ -49,6 +50,7 @@ export class DashboardComponent implements OnInit {
           .catch(error => {
               console.log(error);
           });
+
       axios.get('http://localhost:8080/products')
           .then(response => {
               console.log('freddy', response.data);

@@ -17,15 +17,18 @@ export class AddproductComponent implements OnInit {
   public sellprice: any;
   public description: any;
   public stock: any;
+  public nav;
   constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-    /** spinner starts on init */
-    this.spinner.show();
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 200);
+    const auth = localStorage.getItem('profile');
+    const authparsed = JSON.parse(auth);
+
+    if (authparsed !== null || authparsed !== isUndefined) {
+        this.nav = authparsed.activated;
+    } else {
+        this.nav = '';
+    }
   }
 
   createProduct() {

@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
     public gender: any;
     public email: any;
     public password: any;
+    public nav;
 
   constructor(private spinner: NgxSpinnerService) { }
 
@@ -26,9 +27,8 @@ export class RegisterComponent implements OnInit {
   }
 
   createUser() {
-
-    /** spinner starts on init */
-    this.spinner.show();
+    const auth = localStorage.getItem('profile');
+    const authparsed = JSON.parse(auth);
     const firstname = this.firstname;
     const lastname = this.lastname;
     const mobile = this.mobile;
@@ -42,6 +42,11 @@ export class RegisterComponent implements OnInit {
     console.log(email);
     console.log(password);
 
+    if (authparsed !== null || authparsed !== isUndefined) {
+      this.nav = authparsed.activated;
+  } else {
+      this.nav = '';
+  }
     // Make a request for a user login
 
     axios.post('http://localhost:8080/newshopper?firstname=' + firstname
@@ -49,10 +54,6 @@ export class RegisterComponent implements OnInit {
         .then(response => {
 
           window.location.href = '/users';
-          setTimeout(() => {
-            /** spinner ends after 5 seconds */
-            this.spinner.hide();
-          }, 200);
         })
         .catch(error => {
           console.log(error);

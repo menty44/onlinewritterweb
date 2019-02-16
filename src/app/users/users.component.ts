@@ -12,12 +12,11 @@ import axios from 'axios';
 export class UsersComponent implements OnInit {
   private clickMessage: string;
   private allUsers: any;
+  public nav;
 
   constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-      /** spinner starts on init */
-      this.spinner.show();
       this.clickMessage = 'You are my hero!';
 
       // Make a request for a user login
@@ -28,11 +27,6 @@ export class UsersComponent implements OnInit {
               localStorage.setItem('totalusers', JSON.stringify(response.data.totalElements));
 
               this.allUsers = response.data;
-
-              setTimeout(() => {
-                  /** spinner ends after 5 seconds */
-                  this.spinner.hide();
-              }, 200);
           })
           .catch(error => {
               console.log(error);

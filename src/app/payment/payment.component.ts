@@ -6,16 +6,12 @@ import {NgxSpinnerService} from 'ngx-spinner';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
+  public nav;
 
   constructor(private spinner: NgxSpinnerService) { }
 
   ngOnInit() {
-    /** spinner starts on init */
-    this.spinner.show();
-    setTimeout(() => {
-      /** spinner ends after 5 seconds */
-      this.spinner.hide();
-    }, 500);
+    
   }
 
 }
