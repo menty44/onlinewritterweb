@@ -17,7 +17,7 @@ export class ProductsComponent implements OnInit {
     const auth = localStorage.getItem('profile');
     const authparsed = JSON.parse(auth);
 
-    if (authparsed !== null || authparsed !== isUndefined) {
+    if (authparsed !== null || authparsed !== undefined) {
         this.nav = authparsed.activated;
     } else {
         this.nav = '';

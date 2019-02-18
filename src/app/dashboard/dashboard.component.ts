@@ -16,7 +16,6 @@ export class DashboardComponent implements OnInit {
     private customerissues;
     private products;
     private allUsers: any;
-    private products;
 
   constructor() { }
 
