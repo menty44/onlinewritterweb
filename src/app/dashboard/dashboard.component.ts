@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import swal from 'sweetalert';
+// import swal from 'sweetalert';
 import axios from 'axios';
 
 @Component({
@@ -38,7 +38,7 @@ export class DashboardComponent implements OnInit {
       // swal('hapana!', 'ba!', 'error');
     } else {
       // swal('Good job!', 'You clicked the button!', 'success');
-      axios.get('http://localhost:8080/users')
+      axios.get('http://46.101.189.75:8585/users')
           .then(response => {
               console.log('freddy', response.data);
               console.log('freddy', response.data.totalElements);
@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
               console.log(error);
           });
 
-      axios.get('http://localhost:8080/products')
+      axios.get('http://46.101.189.75:8585/products')
           .then(response => {
               console.log('freddy', response.data);
               console.log('freddy', response.data.totalElements);
