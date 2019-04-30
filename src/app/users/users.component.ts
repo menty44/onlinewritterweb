@@ -20,7 +20,7 @@ export class UsersComponent implements OnInit {
       this.clickMessage = 'You are my hero!';
 
       // Make a request for a user login
-      axios.get('http://localhost:9090/users')
+      axios.get('http://3.14.152.255:9090/users')
           .then(response => {
               console.log('freddy', response.data);
               console.log('freddy', response.data.totalElements);

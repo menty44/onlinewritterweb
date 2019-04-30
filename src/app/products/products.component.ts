@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
     } else {
         this.nav = '';
 }
-    axios.get('http://localhost:9090/products')
+    axios.get('http://3.14.152.255:9090/products')
           .then(response => {
               console.log('freddy', response.data);
               console.log('freddy', response.data.totalElements);

@@ -35,7 +35,7 @@ export class HeroesComponent implements OnInit {
 
     this.fred = 'hello world';
     // Make a request for a user
-    axios.get('http://localhost:8080/userss')
+    axios.get('http://3.14.152.255:8080/userss')
       .then(response => {
         console.log('freddy', response.data);
           this.oluoch = response.data;

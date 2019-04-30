@@ -44,7 +44,7 @@ export class AddproductComponent implements OnInit {
     console.log('sellprice'  + sellprice);
     console.log('description' +  description);
     console.log('stock' +  stock);
-    axios.post('http://localhost:9090/createprod?prodcode=' + prodcode +
+    axios.post('http://3.14.152.255:9090/createprod?prodcode=' + prodcode +
       '&unitprice=' + unitprice +
       '&sellprice=' + sellprice +
       '&description=' + description +

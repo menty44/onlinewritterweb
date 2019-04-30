@@ -38,7 +38,7 @@ export class DashboardComponent implements OnInit {
       // swal('hapana!', 'ba!', 'error');
     } else {
       // swal('Good job!', 'You clicked the button!', 'success');
-      axios.get('http://localhost:9090/users')
+      axios.get('http://3.14.152.255:9090/users')
           .then(response => {
               console.log('freddy', response.data);
               console.log('freddy', response.data.totalElements);
@@ -50,7 +50,7 @@ export class DashboardComponent implements OnInit {
               console.log(error);
           });
 
-      axios.get('http://localhost:9090/products')
+      axios.get('http://3.14.152.255:9090/products')
           .then(response => {
               console.log('freddy', response.data);
               console.log('freddy', response.data.totalElements);

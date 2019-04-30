@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
   }
     // Make a request for a user login
 
-    axios.post('http://localhost:9090/newshopper?firstname=' + firstname
+    axios.post('http://3.14.152.255:9090/newshopper?firstname=' + firstname
       + '&lastname=' + lastname + '&mobile=' + mobile + '&email=' + email + '&gender=' + gender + '&password=' + password)
         .then(response => {
           console.log('register person response', response);
