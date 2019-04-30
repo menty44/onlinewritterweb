@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
         console.log(m);
 
         // Make a request for a user login
-        axios.get('http://46.101.189.75:8585/login?email=' + k + '&password=' + m)
+        axios.get('http://localhost:9090/login?email=' + k + '&password=' + m)
             .then(response => {
                 console.log('freddy', response.data);
                 console.log('freddy', response.data.activated);
